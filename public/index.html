@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="flex h-screen bg-[#f0f2f5]">
+        <!-- Sidebar -->
+        <div class="w-[400px] bg-white border-r">
+            <!-- Header Sidebar -->
+            <div class="bg-[#f0f2f5] p-4 flex items-center">
+                <div class="w-10 h-10 rounded-full overflow-hidden">
+                    <img src="https://cdn.undiksha.ac.id/wp-content/uploads/sites/122/2024/05/16004810/trpl.png#31" 
+                         alt="profile" 
+                         class="w-full h-full bg-red object-cover">
+                </div>
+            </div>
+            <!-- Contact List -->
+            <div class="hover:bg-[#f0f2f5] p-3 cursor-pointer">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full overflow-hidden">
+                        <img src="https://cdn.undiksha.ac.id/wp-content/uploads/sites/122/2024/05/16004810/trpl.png#31" 
+                             alt="trpl" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">TRPL</h3>
+                        <p class="text-sm text-gray-600">Teknik Rekayasa Perangkat Lunak</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="flex-1 flex flex-col">
+            <!-- Chat Header -->
+            <div class="bg-[#f0f2f5] p-4 flex items-center space-x-4">
+                <div class="w-10 h-10 rounded-full overflow-hidden">
+                    <img src="https://cdn.undiksha.ac.id/wp-content/uploads/sites/122/2024/05/16004810/trpl.png#31" 
+                         alt="trpl" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h2 class="font-semibold">TRPL</h2>
+                    <p class="text-sm text-gray-600">online</p>
+                </div>
+            </div>
+
+            <!-- Messages Area -->
+            <ul id="messages" class="flex-1 overflow-y-auto p-6 bg-[#efeae2]"></ul>
+
+            <!-- Input Area -->
+            <form id="chatForm" class="p-4 flex justify-center bg-[#efeae2]">
+                <div class="flex bg-white rounded-[15px] mb-4 w-[90%] space-x-2">
+                    <input id="messageInput" 
+                           type="text" 
+                           placeholder="Type a message" 
+                           class="flex-1 px-4 py-2 rounded-lg border-0 focus:ring-0 focus:outline-none">
+                    <button type="submit" 
+                            class="bg-[#00a884] text-white px-6 py-2 rounded-lg hover:bg-[#00957a]">
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

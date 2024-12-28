@@ -1,0 +1,65 @@
+#messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+#messages {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    list-style: none;
+    padding: 0;
+}
+
+#messages li {
+    max-width: 30%;
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-radius: 7.5px;
+    position: relative;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+#messages li.sent {
+    background: #d9fdd3;
+    margin-left: auto;
+    margin-right: 20px;
+    border-top-right-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    border-top-left-radius: 7.5px;
+    border-bottom-left-radius: 7.5px;
+}
+
+#messages li.received {
+    background: white;
+    margin-right: auto;
+    margin-left: 20px;
+    border-top-right-radius: 7.5px;
+    border-bottom-right-radius: 7.5px;
+    border-top-left-radius: 7.5px;
+    border-bottom-left-radius: 7.5px;
+}
+
+/* Animasi untuk pesan baru */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#messages li {
+    animation: slideIn 0.2s ease-out;
+}
