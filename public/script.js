@@ -10,7 +10,7 @@ function addMessage(data, isSender) {
     const ipDiv = document.createElement('div');
     
     messageDiv.textContent = data.message;
-    ipDiv.textContent = `IP: ${data.ip || '-'}`;
+    ipDiv.textContent = `IP: ${data.ip || '10.23.3.133'}`;
     ipDiv.className = 'sender-ip';
     
     item.appendChild(messageDiv);
